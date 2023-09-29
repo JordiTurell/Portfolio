@@ -1,0 +1,46 @@
+@keyframes naviconanimated {
+    0%{
+        top: -110px;
+    }
+
+    40%{
+        top: 20px;
+    }
+
+    100%{
+        top: 0px;
+    }
+}
+
+@keyframes navlinksanimated {
+    0% {
+        margin-top: -110px;
+        margin-bottom: 110px;
+    }
+    100% {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@keyframes maquinadeescrivir {
+    0% {
+        opacity: 1;
+        //width: 0px;
+        width: fit-content;
+    }
+
+    100% {
+        opacity: 1;
+        width: fit-content;
+    }
+}  
+
+@keyframes toggle{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

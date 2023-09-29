@@ -1,0 +1,44 @@
+<!-- Barra de Navegación -->
+<nav class="navbar navbar-expand-md">
+    <div class="d-flex justify-content-center">
+        <!-- Logotipo o título -->
+        <a class="navbar-brand d-flex justify-content-start" [routerLink]="['/home']">
+            <img src="/assets/argproglogo.png" class="nav-icon" />
+        </a>
+        
+        <button class="hamburger-icon" (click)="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <!-- Botones centrados -->
+        <ul class="navbar-nav mx-auto d-flex" id="menu">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Inicio</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Acerca</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Habilidades</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Proyectos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Contacto</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </nav>
