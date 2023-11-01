@@ -5,7 +5,10 @@ import { Component, AfterViewInit } from '@angular/core';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
+
 export class NavigationComponent implements AfterViewInit {
+
+  istoggle: boolean = false
   
   ngAfterViewInit(): void {
     let navicon = document.querySelector('.nav-icon') as HTMLImageElement
@@ -14,7 +17,6 @@ export class NavigationComponent implements AfterViewInit {
     let navlinks = document.getElementsByClassName('nav-link') as HTMLCollectionOf<HTMLAnchorElement>
     
     Array.from(navlinks).forEach((element, index) => {
-      console.log(element)
       setTimeout(()=>{
         element.classList.add('navlinkanimated')
       }, index * 150 )

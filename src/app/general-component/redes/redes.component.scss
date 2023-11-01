@@ -1,0 +1,57 @@
+@import '../../scss/colors.scss';
+@import '../../scss/animations.scss';
+
+.social{    
+    width: 200px;
+    height: 54px;
+    margin: 20px;
+    position: relative;
+    left:45%;
+    top:76.1%;
+    ul{
+        display: inline-block;
+        padding: 0px;
+        position: absolute;
+        margin-top: 10px;
+        z-index:1;
+        overflow: hidden;
+        li{
+            display: inline-block;
+            padding-left: 20px;
+            overflow: hidden;
+            img{
+                width:30px;
+                height: auto;
+            }
+        }
+        .iconsocial.socialanimated{
+            animation: socialanimation 1s forwards;
+        }
+    }
+}
+
+.social::before,
+.social::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90%; /* Ajusta el ancho de la inclinación según sea necesario */
+  background-color: $fondo;
+}
+
+.social::before{
+  border:solid 2px $social;
+  border-bottom: 0px;
+  border-right: 0px;
+  left: 0;
+  transform: skewX(-15deg);
+}
+
+.social::after{
+  right: 0;
+  border:solid 2px $social;
+  border-bottom: 0px;
+  border-left: 0px;
+  transform: skewX(15deg);
+}

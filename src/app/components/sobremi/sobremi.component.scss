@@ -1,0 +1,23 @@
+@import '../../scss/colors.scss';
+
+#sobremi{
+    padding-top: 70px;
+
+    h3{
+        color:$white;
+    }
+
+    hr{
+        color:$social;
+        border:solid 2px $social;
+        opacity: 1;
+        width:140px;
+        margin-bottom: 35px;
+    }
+
+    p{
+        color:$white;
+        line-height: 5px;
+    }
+
+}
