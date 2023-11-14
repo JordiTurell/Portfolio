@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+    <span>Dashboard</span>
+    <div class="spacer"></div>
+    
+    <div (click)="inicio()">
+        <span>Inicio</span>
+        <mat-icon aria-hidden="true" aria-label="Home" fontIcon="home"></mat-icon>
+    </div>
+    <div (click)="Proyectos()">
+        <span>Proyectos</span>
+        <mat-icon aria-hidden="true" aria-label="Proyectos" fontIcon="keyboard"></mat-icon>
+    </div>
+    <div (click)="Skills()">
+        <span>Skills</span>
+        <mat-icon aria-hidden="true" aria-label="Salir" fontIcon="build"></mat-icon>
+    </div>
+    <div (click)="Administracion()">
+        <span>Administracion</span>
+        <mat-icon aria-hidden="true" aria-label="Administración" fontIcon="account_circle"></mat-icon>
+    </div>
+    <div (click)="logout()">
+        <mat-icon aria-hidden="false" aria-label="Salir" fontIcon="exit_to_app"></mat-icon>
+    </div>
+    
+</mat-toolbar>

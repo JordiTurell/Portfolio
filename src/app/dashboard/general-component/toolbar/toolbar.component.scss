@@ -1,0 +1,13 @@
+.spacer {
+    flex: 1;
+  }
+
+div{
+  position: relative;
+  margin-right: 25px;
+  span{
+    float:left;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+}

@@ -32,7 +32,7 @@ class Areas():
         print(f'{self.nickname}, {hashed_password}')
         query = Usuario.query.filter(Usuario.nickname == self.nickname).first()
         if query is None:
-            return jsonify({ 'stauts': False, 'message': 'El usuario no existe' }), 400
+            return jsonify({ 'status': False, 'message': 'El usuario no existe' }), 400
         else:
             if sha256_crypt.verify(self.password, query.password):
                 secret_key = "t489cru48mu98f329"
@@ -42,6 +42,6 @@ class Areas():
                 }
                 expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=24)
                 token = jwt.encode({"exp": expiration, **responseitem}, secret_key, algorithm="HS256")
-                return jsonify({ 'stauts': True, 'token': token }), 200
+                return jsonify({ 'status': True, 'token': token }), 200
             else:
-                return jsonify({ 'stauts': False, 'message': 'El usuario no existe' }), 400
+                return jsonify({ 'status': False, 'message': 'El usuario no existe' }), 400
