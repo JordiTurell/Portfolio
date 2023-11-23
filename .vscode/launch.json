@@ -10,6 +10,13 @@
       "url": "http://localhost:4200/"
     },
     {
+      "name": "Api rest",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/api/app.py",
+      "console": "integratedTerminal"
+    },
+    {
       "name": "ng test",
       "type": "chrome",
       "request": "launch",

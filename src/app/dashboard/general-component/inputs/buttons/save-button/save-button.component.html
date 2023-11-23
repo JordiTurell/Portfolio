@@ -1,0 +1,14 @@
+<button [type]="type" [disabled]="isLoading" (click)="handleClick()" class="base-button">
+    <ng-container *ngIf="isLoading">
+        <div class="spinner-container">
+            <div class="dot-wave">
+                <div class="dot-wave__dot"></div>
+                <div class="dot-wave__dot"></div>
+                <div class="dot-wave__dot"></div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!isLoading">
+        {{ text }}
+    </ng-container>
+</button>

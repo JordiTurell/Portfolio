@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
+
 from passlib.hash import sha256_crypt
 from context import db, Usuario
+from encriptar import bcrypt
 import jwt
 import datetime
 
@@ -10,26 +12,21 @@ class Areas():
         self.password = password
         
     def Registro(self):
-        # print(f'nick:{self.nickname}, pass: {self.password}')
-        # if 'nickname' not in self.nickname or 'password' not in self.password:
-        #     return jsonify({'message': 'Campos incompletos'}), 400
+         print(f'nick:{self.nickname}, pass: {self.password}')
+         sal = bcrypt.gensalt()
 
-        # users_db = Usuario.query.filter_by(nickname = self.nickname).first()
+         hashed_password = bcrypt.generate_password_hash(self.password.encode('utf-8'), sal)
+         print(hashed_password)
+         users_db = Usuario(self.nickname, hashed_password)
+         db.session.add(users_db)
+         db.session.commit()
 
-        # if self.nickname in users_db.nickname:
-        #     return jsonify({'message': 'El usuario ya existe'}), 400
-
-        # Hasheamos la contraseña antes de almacenarla
-        # hashed_password = sha256_crypt.hash(self.password)
-        # users_db = Usuario(self.nickname, hashed_password)
-        # db.session.add(users_db)
-        # db.session.commit()
-
-        return jsonify({'message': 'Usuario registrado exitosamente'})
+         return 'Usuario registrado exitosamente'
     
     def Login(self):
-        hashed_password = sha256_crypt.hash(self.password)
+        hashed_password = bcrypt.generate_password_hash(self.password).decode('utf-8')
         print(f'{self.nickname}, {hashed_password}')
+        
         query = Usuario.query.filter(Usuario.nickname == self.nickname).first()
         if query is None:
             return jsonify({ 'status': False, 'message': 'El usuario no existe' }), 400

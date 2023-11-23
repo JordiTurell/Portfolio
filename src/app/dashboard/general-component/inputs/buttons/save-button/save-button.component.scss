@@ -1,0 +1,70 @@
+.base-button{
+    border-radius:25px;
+    background-color:rgb(81, 95, 201);
+    color: white;
+    font-weight: 500;
+    padding:5px 15px 5px 15px;
+    border:solid 1px rgb(65, 76, 162);
+}
+
+.spinner-container {
+    min-height: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.dot-wave {
+    --uib-size: 30px;
+    --uib-speed: 2s;
+    --dot-duration: calc(var(--uib-speed) / 3);
+    --uib-color: white;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: calc(var(--uib-size) * 0.17);
+    padding-top: calc(var(--uib-size) * 0.10);
+}
+
+.dot-wave__dot {
+    flex-shrink: 0;
+    width: calc(var(--uib-size) * 0.17);
+    height: calc(var(--uib-size) * 0.17);
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    will-change: transform, opacity;
+    animation: jump var(--uib-speed) infinite;
+    opacity: 0.5;
+}
+
+@keyframes jump {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+
+    16.66% {
+        transform: translateY(-200%);
+        opacity: 1;
+    }
+
+    33.33% {
+        transform: translateY(0);
+    }
+}
+
+.dot-wave__dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot-wave__dot:nth-child(2) {
+    animation-delay: var(--dot-duration);
+}
+
+.dot-wave__dot:nth-child(3) {
+    animation-delay: calc(2 * var(--dot-duration));
+}

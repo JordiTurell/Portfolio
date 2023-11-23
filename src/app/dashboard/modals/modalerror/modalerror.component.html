@@ -1,0 +1,11 @@
+<mat-dialog-content class="center">
+    <div class="error-modal">
+        <mat-icon class="error-icon">error</mat-icon>
+        <div class="error-text">
+          <p>{{ errorMessage }}</p>
+        </div>
+      </div>      
+      <div mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="'OK'" class="base-button">Cerrar</button>
+      </div>
+</mat-dialog-content>  

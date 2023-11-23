@@ -1,0 +1,17 @@
+<form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Usuario</mat-label>
+        <input matInput formControlName="nickname">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" id="password" formControlName="password">
+      </mat-form-field>
+    </div>
+    <div class="form-group center">
+      <app-save-button #saveButton class="personal-information__button" type="submit" text="Acceder" [isLoading]="isLoading" (action)="clickButton()" />
+    </div>
+</form>

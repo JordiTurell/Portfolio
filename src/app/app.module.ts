@@ -24,6 +24,13 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ModalloginComponent } from './dashboard/modals/modallogin/modallogin.component';
+import { FormsLoginComponent } from './dashboard/forms/forms-login/forms-login.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SaveButtonComponent } from './dashboard/general-component/inputs/buttons/save-button/save-button.component';
+import { ModalerrorComponent } from './dashboard/modals/modalerror/modalerror.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,11 @@ import { MatTableModule } from '@angular/material/table';
     LayoutComponent,
     ProyectosComponent,
     HabilidadesComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    ModalloginComponent,
+    FormsLoginComponent,
+    SaveButtonComponent,
+    ModalerrorComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +63,10 @@ import { MatTableModule } from '@angular/material/table';
     MatMenuModule,
     MatIconModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

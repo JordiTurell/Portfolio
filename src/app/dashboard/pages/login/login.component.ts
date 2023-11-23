@@ -1,35 +1,29 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { LoginService } from '../../service/login/loginservice.service';
-import { AuthService } from '../../service/auth/authservice.service';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalloginComponent } from '../../modals/modallogin/modallogin.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
-  loginform: FormGroup
-
-  constructor(private router:Router, private fb: FormBuilder, private loginservice: LoginService, 
-    private authservice:AuthService){
-    this.loginform = this.fb.group({
-      nickname: ['', Validators.required],
-      password: ['', Validators.required]
-    })
+  constructor(public dialog: MatDialog){
+    
+  }
+  ngOnInit(): void {
+    this.openModal()
   }
 
-  onSubmit(){
-    if(this.loginform.valid){
-      this.loginservice.authenticate(this.loginform.value).subscribe((response)=>{
-        if(response.status){
-          this.authservice.setToken(response.token)
-          this.router.navigate(['/dashboard/home'])
-        }
-      })
-    }
+  openModal(): void {
+    this.dialog.open(ModalloginComponent, {
+      width: '60vw',
+      minWidth: '300px',
+      maxWidth:'800px',
+      disableClose: true,
+      autoFocus: false,
+      panelClass: 'full-screen-modal',
+    });
   }
-
 }
