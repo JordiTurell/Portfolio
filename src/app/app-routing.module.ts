@@ -8,9 +8,14 @@ import { LayoutComponent } from './dashboard/pages/layout/layout.component';
 import { AuthGuard } from './guards/authguard.guard';
 import { ProyectosComponent as DashProyectosComponent } from './dashboard/pages/proyectos/proyectos.component';
 import { HabilidadesComponent as  DashHabilidadesComponent } from './dashboard/pages/habilidades/habilidades.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'contacto', component: ContactoComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path:"dashboard/login", component: LoginComponent },
   { path: "dashboard", canActivate: [AuthGuard], component: LayoutComponent, children:[

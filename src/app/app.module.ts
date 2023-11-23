@@ -31,6 +31,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { SaveButtonComponent } from './dashboard/general-component/inputs/buttons/save-button/save-button.component';
 import { ModalerrorComponent } from './dashboard/modals/modalerror/modalerror.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { ModalerrorComponent } from './dashboard/modals/modalerror/modalerror.co
     ModalloginComponent,
     FormsLoginComponent,
     SaveButtonComponent,
-    ModalerrorComponent
+    ModalerrorComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

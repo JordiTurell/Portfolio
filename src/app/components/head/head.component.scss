@@ -7,45 +7,28 @@
     background-repeat: no-repeat;
     background-position-y: 20%;
     background-size: cover;
-    height: 100dvh;
-    width: 100dvw;
     border-bottom:solid 2px $social;
+    
     .yo{
-        position: absolute;
         border-radius: 100%;
-        width: 10%;
-        left: 20.5%;
-        top: 26%;
         box-shadow: 2px 2px 24px 4px white;
     }
     
+    .hola{
+        color: $white;
+        position: relative;
+        font-weight: bold;
+        font-size: 3rem;
+        font-family: $exo;
+        margin-bottom: 30px;
+
+    }
+
     .title{
         color: $white;
         position: relative;
-        left:40%;
-        top:30%;
         font-weight: bold;
-        font-size: 60px;
+        font-size: 3rem;
         font-family: $exo;
-        opacity: 0;
-        width: fit-content;
-        .cursor{
-            display: block;
-            width: 100%;
-            height: 55px;
-            position: absolute;
-            z-index: 2;
-            top: 11px;
-            border-left: 5px $white solid;
-            animation: toggle 1s infinite;
-        }
-    }
-
-    .title.titleanimation{
-        animation:maquinadeescrivir 1s ease forwards;
-    }
-
-    .title:nth-child(3){
-        top:35%;
     }
 }

@@ -3,14 +3,13 @@
 @import '../../scss/animations.scss';
 
 nav{
-    position:absolute;
     margin:0 auto;
     top: 0px;
     left: 0px;
     background-color: $transparentnav;
     width:100vw;
     padding: 0px;
-    
+    z-index:100;
     ul#menu{
         width: 99vw;
     }
@@ -27,86 +26,44 @@ nav{
         animation: naviconanimated 4s forwards;
     }
 
-    .hamburger-icon {
-        display: none;
-        position: absolute;
-        top: 20px;
-        right: 10px;
-        background-color: transparent;
-        border:none;
-        z-index: 100;
-        cursor: pointer;
 
-        .bar {
+    .nav-link{
+        padding:25px 25px 0px 25px;
+        color:$white;
+        transform: skew(20deg);
+        transform-origin: top left;
+        border-bottom:solid 5px $white;
+        margin-left:5px;
+        box-shadow:0px 10px 5px $transparentnav;
+        text-align: center;
+        margin-top: -110px;
+        margin-bottom: 110px;
+        span{
+            font-family: $exo;
+            font-size: 20px;
             display: block;
-            width: 35px;
-            height: 5px;
-            background-color: #fff;
-            margin-bottom: 5px;
+            margin-top: 10px;
+            transform: skew(-20deg);
+            transform-origin: top left;
         }
     }
 
-    .hamburger-icon:hover{
-        
+    .navlinkanimated{
+        animation: navlinksanimated 1s ease forwards;
     }
-      
-
-    .navbar-nav{
-        width:100vw;
-        justify-content: center;
-
-        .nav-item{
-            .nav-link{
-                padding:25px 25px 0px 25px;
-                color:$white;
-                transform: skew(20deg);
-                transform-origin: top left;
-                border-bottom:solid 5px $white;
-                margin-left:5px;
-                box-shadow:0px 10px 5px $transparentnav;
-                text-align: center;
-                margin-top: -110px;
-                margin-bottom: 110px;
-                span{
-                    font-family: $exo;
-                    font-size: 20px;
-                    display: block;
-                    margin-top: 10px;
-                    transform: skew(-20deg);
-                    transform-origin: top left;
-                }
-            }
-
-            .navlinkanimated{
-                animation: navlinksanimated 1s ease forwards;
-            }
-            
-            .nav-link:hover{
-                background-color:$transparentnavhover;
-                box-shadow:0px 10px 5px $transparentnavhover;
-            }
-        }
-
-        .nav-item.active{
-            .nav-link{
-                background: linear-gradient(to bottom, $red, $orange);
-                box-shadow:0px 10px 5px $orange;
-            }
-            .nav-link:hover{
-                background: linear-gradient(to bottom, $redhover, $orangehover);
-                box-shadow:0px 10px 5px $orangehover;
-            }
-        }
+    
+    .nav-link:hover{
+        background-color:$transparentnavhover;
+        box-shadow:0px 10px 5px $transparentnavhover;
     }
-}
-
-@media (width <= 766px) {
-    .hamburger-icon {
-      display: block !important;
+    
+    .nav-link.active{
+        background: linear-gradient(to bottom, $red, $orange);
+        box-shadow:0px 10px 5px $orange;
     }
-
-    .navbar-nav{
-        display:none !important;
-        background:black;
+    .nav-link.active:hover{
+        background: linear-gradient(to bottom, $redhover, $orangehover);
+        box-shadow:0px 10px 5px $orangehover;
     }
+    
 }

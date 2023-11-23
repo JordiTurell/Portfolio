@@ -24,6 +24,6 @@ export class NavigationComponent implements AfterViewInit {
   }
 
   toggleMenu(){
-    
+    this.istoggle = !this.istoggle
   }
 }
