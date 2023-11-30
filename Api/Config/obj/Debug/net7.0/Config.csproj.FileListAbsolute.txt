@@ -1,0 +1,14 @@
+F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Config.deps.json
+F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Config.runtimeconfig.json
+F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Config.dll
+F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Config.pdb
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.csproj.AssemblyReference.cache
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.GeneratedMSBuildEditorConfig.editorconfig
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.AssemblyInfoInputs.cache
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.AssemblyInfo.cs
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.csproj.CoreCompileInputs.cache
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.dll
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\refint\Config.dll
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.pdb
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.genruntimeconfig.cache
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\ref\Config.dll

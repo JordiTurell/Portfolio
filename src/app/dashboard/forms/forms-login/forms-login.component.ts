@@ -21,7 +21,7 @@ export class FormsLoginComponent {
 
   constructor(private router:Router, private fb: FormBuilder, private loginservice: LoginService, private authservice:AuthService, public errordialogservice: ErrorDialogService){
     this.loginform = this.fb.group({
-      nickname: ['', Validators.required],
+      user: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
@@ -36,9 +36,7 @@ export class FormsLoginComponent {
       this.isLoading = true;
       this.loginservice.authenticate(this.loginform.value).subscribe({
         next: (response) =>{
-          if(response.status){ 
-            this.authservice.setToken(response.token)
-          }
+          this.authservice.setToken(response.token)
         },
         error: (e)=>{
           this.errordialogservice.openErrorDialog('Acceso incorrecto')

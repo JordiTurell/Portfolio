@@ -1,6 +1,0 @@
-#requirements.in
-Flask
-Flask-Migrate
-Flask-CORS
-SQLAlchemy
-Flask-Bcrypt
