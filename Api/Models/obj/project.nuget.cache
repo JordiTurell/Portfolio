@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K/56UewvZuX4XtCMnxno3/bTpslK88ZAxzDxz0DsbE15yrwa9NzPXWFV96KYHAj54GY2ZDZEx4+gvJpyK+SM/w==",
+  "dgSpecHash": "sZwxq91VeqBNLex1icLSy1PEWIwD92mW8ox4SFOk1/l91sVJLBlPHOQ9RUUdryV4OZ3NxbpyNButgFztdwy0Yg==",
   "success": true,
-  "projectFilePath": "F:\\Projects\\Portfolio\\Api\\Models\\Models.csproj",
+  "projectFilePath": "F:\\Projects\\Portfolio\\Api\\Models\\ViewModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

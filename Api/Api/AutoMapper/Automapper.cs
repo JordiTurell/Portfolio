@@ -1,4 +1,7 @@
 using AutoMapper;
+using DTO;
+using Entities;
+using ViewModel;
 
 namespace Api.AutoMapper
 {
@@ -6,6 +9,11 @@ namespace Api.AutoMapper
   {
     public Automapper()
     {
+      CreateMap<SobremiDTO, SobremiVM>().ReverseMap();
+      CreateMap<Sobremi, SobremiDTO>().ReverseMap();
+
+      CreateMap<SkillsDto, SkillsVM>().ReverseMap();
+      CreateMap<Skills, SkillsDto>().ReverseMap();
     }
   }
 }

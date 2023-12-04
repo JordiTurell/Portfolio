@@ -12,3 +12,6 @@ F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\refint\Config.dll
 F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.pdb
 F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.genruntimeconfig.cache
 F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\ref\Config.dll
+F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Entities.dll
+F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Entities.pdb
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.csproj.CopyComplete

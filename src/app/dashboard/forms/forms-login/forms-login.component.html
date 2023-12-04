@@ -1,17 +1,13 @@
 <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <mat-form-field>
-        <mat-label>Usuario</mat-label>
-        <input matInput formControlName="user">
-      </mat-form-field>
+    <div class="h-auto">
+      <label>Usuario*</label>
+      <input matInput formControlName="user" class="border border-gray-300 bg-white p-2 rounded-md w-full mb-3">
     </div>
-    <div class="form-group">
-      <mat-form-field>
-        <mat-label>Contraseña</mat-label>
-        <input matInput type="password" id="password" formControlName="password">
-      </mat-form-field>
+    <div class="h-auto">
+      <label>Contraseña*</label>
+      <input matInput type="password" id="password" formControlName="password"  class="border border-gray-300 bg-white p-2 rounded-md w-full mb-3">
     </div>
     <div class="form-group center">
-      <app-save-button #saveButton class="personal-information__button" type="submit" text="Acceder" [isLoading]="isLoading" (action)="clickButton()" />
+      <app-save-button #saveButton class="text-white font-bold rounded-full transition duration-300 ease-in-out" type="submit" text="Acceder" [isLoading]="isLoading" (action)="clickButton()" />
     </div>
 </form>

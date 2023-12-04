@@ -92,10 +92,8 @@ F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Se
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Config.dll
-F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Models.dll
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Services.dll
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Config.pdb
-F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Models.pdb
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Services.pdb
 F:\Projects\Portfolio\Api\Api\obj\Debug\net7.0\Api.csproj.AssemblyReference.cache
 F:\Projects\Portfolio\Api\Api\obj\Debug\net7.0\Api.GeneratedMSBuildEditorConfig.editorconfig
@@ -118,3 +116,9 @@ F:\Projects\Portfolio\Api\Api\obj\Debug\net7.0\refint\Api.dll
 F:\Projects\Portfolio\Api\Api\obj\Debug\net7.0\Api.pdb
 F:\Projects\Portfolio\Api\Api\obj\Debug\net7.0\Api.genruntimeconfig.cache
 F:\Projects\Portfolio\Api\Api\obj\Debug\net7.0\ref\Api.dll
+F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\ViewModel.dll
+F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\ViewModel.pdb
+F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\DTO.dll
+F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Entities.dll
+F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\DTO.pdb
+F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Entities.pdb

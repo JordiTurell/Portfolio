@@ -1,4 +1,4 @@
-namespace Models
+namespace ViewModel
 {
   public class ResponseItem<T>
   {

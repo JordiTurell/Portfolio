@@ -2,9 +2,9 @@ using Api.JwtFeatures;
 using Config.Config;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Models;
 using Services.LoginService;
 using System.IdentityModel.Tokens.Jwt;
+using ViewModel;
 
 namespace Api.Controllers
 {

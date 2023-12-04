@@ -1,11 +1,11 @@
 using Config.Config;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
-using Models;
 using Services.JWTService;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using ViewModel;
 
 namespace Api.JwtFeatures
 {

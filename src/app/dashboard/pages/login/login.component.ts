@@ -13,17 +13,6 @@ export class LoginComponent implements OnInit{
     
   }
   ngOnInit(): void {
-    this.openModal()
-  }
-
-  openModal(): void {
-    this.dialog.open(ModalloginComponent, {
-      width: '60vw',
-      minWidth: '300px',
-      maxWidth:'800px',
-      disableClose: true,
-      autoFocus: false,
-      panelClass: 'full-screen-modal',
-    });
+   
   }
 }

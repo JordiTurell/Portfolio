@@ -18,7 +18,7 @@ export class SkillsService {
   getlist(request:Requestlist):Observable<Skills[]>{
     let header: HttpHeaders = this.headers.getheader();
     return this.http.post<Skills[]>(
-      `${api}/api/skills/skills`,
+      `${api}/api/skills/DataTable`,
       request,
       { headers: header }
     )

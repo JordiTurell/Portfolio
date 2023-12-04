@@ -15,18 +15,6 @@ export class AuthService {
   constructor() { }
 
   isAuthenticated(token:string):Observable<boolean> {
-  //   this.request = {
-  //     item: token
-  //   }
-  //   let header: HttpHeaders = this.headers.getheaderLogin()
-  //   return this.http.post<Responseitem<string>>(
-  //     `${api}/Areas/${version}/VerificarToken`,
-  //     this.request,
-  //     { headers: header }
-  //   ).pipe(map((resp) => {
-  //     return this.setToken(resp.item)
-  //     //return of(true)
-  //   }), catchError(() => of(false)));
     return of(true)
   }
 

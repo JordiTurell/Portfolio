@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Projects\\Portfolio\\Api\\Models\\Models.csproj",
-      "projectName": "Models",
-      "projectPath": "F:\\Projects\\Portfolio\\Api\\Models\\Models.csproj",
+      "projectUniqueName": "F:\\Projects\\Portfolio\\Api\\Models\\ViewModel.csproj",
+      "projectName": "ViewModel",
+      "projectPath": "F:\\Projects\\Portfolio\\Api\\Models\\ViewModel.csproj",
       "packagesPath": "C:\\Users\\jordi\\.nuget\\packages\\",
       "outputPath": "F:\\Projects\\Portfolio\\Api\\Models\\obj\\",
       "projectStyle": "PackageReference",

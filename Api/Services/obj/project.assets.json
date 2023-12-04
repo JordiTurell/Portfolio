@@ -460,6 +460,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "Entities": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.14",
           "Microsoft.AspNetCore.Identity.UI": "7.0.14",
           "Microsoft.EntityFrameworkCore": "7.0.14",
@@ -473,14 +474,34 @@
           "bin/placeholder/Config.dll": {}
         }
       },
-      "Models/1.0.0": {
+      "DTO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "compile": {
-          "bin/placeholder/Models.dll": {}
+          "bin/placeholder/DTO.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Models.dll": {}
+          "bin/placeholder/DTO.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "ViewModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ViewModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ViewModel.dll": {}
         }
       }
     }
@@ -1241,10 +1262,20 @@
       "path": "../Config/Config.csproj",
       "msbuildProject": "../Config/Config.csproj"
     },
-    "Models/1.0.0": {
+    "DTO/1.0.0": {
       "type": "project",
-      "path": "../Models/Models.csproj",
-      "msbuildProject": "../Models/Models.csproj"
+      "path": "../DTO/DTO.csproj",
+      "msbuildProject": "../DTO/DTO.csproj"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Entities/Entities.csproj",
+      "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "ViewModel/1.0.0": {
+      "type": "project",
+      "path": "../Models/ViewModel.csproj",
+      "msbuildProject": "../Models/ViewModel.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1252,7 +1283,9 @@
       "AutoMapper >= 12.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "Config >= 1.0.0",
-      "Models >= 1.0.0"
+      "DTO >= 1.0.0",
+      "Entities >= 1.0.0",
+      "ViewModel >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1291,8 +1324,14 @@
             "F:\\Projects\\Portfolio\\Api\\Config\\Config.csproj": {
               "projectPath": "F:\\Projects\\Portfolio\\Api\\Config\\Config.csproj"
             },
-            "F:\\Projects\\Portfolio\\Api\\Models\\Models.csproj": {
-              "projectPath": "F:\\Projects\\Portfolio\\Api\\Models\\Models.csproj"
+            "F:\\Projects\\Portfolio\\Api\\DTO\\DTO.csproj": {
+              "projectPath": "F:\\Projects\\Portfolio\\Api\\DTO\\DTO.csproj"
+            },
+            "F:\\Projects\\Portfolio\\Api\\Entities\\Entities.csproj": {
+              "projectPath": "F:\\Projects\\Portfolio\\Api\\Entities\\Entities.csproj"
+            },
+            "F:\\Projects\\Portfolio\\Api\\Models\\ViewModel.csproj": {
+              "projectPath": "F:\\Projects\\Portfolio\\Api\\Models\\ViewModel.csproj"
             }
           }
         }

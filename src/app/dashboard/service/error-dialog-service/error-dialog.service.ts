@@ -12,7 +12,9 @@ export class ErrorDialogService {
   openErrorDialog(errorMessage: string): void {
     this.dialog.open(ModalerrorComponent, {
       width: '400px',
-      data: { errorMessage: errorMessage }
+      data: { errorMessage: errorMessage },
+      panelClass: 'mat-dialog-container'
     });
+    
   }
 }
