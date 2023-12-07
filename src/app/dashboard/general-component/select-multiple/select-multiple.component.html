@@ -1,0 +1,19 @@
+<div class="relative inline-block text-left w-full">
+    <div>
+        <div type="button" class="inline-flex justify-left items-left w-full px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500" (click)="show()">
+            <span class="mt-1" *ngIf="opcionesSeleccionadas.length == 0" id="seleccion">Seleccionar opción</span>
+            <ul *ngIf="opcionesSeleccionadas" class="p-0">
+                <li *ngFor="let option of opcionesSeleccionadas" class="bg-gray-300 rounded-full p-2 text-center inline-block ml-2" (click)="removeitem($event)">{{option.value}}</li>
+            </ul>
+            <svg class="h-8 w-8 text-black"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <polyline points="6 9 12 15 18 9" /></svg>
+        </div>
+    </div>
+    <div [ngClass]="{'hidden': !visible }" class="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" id="contentdropdow">
+        <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+            <select multiple id="dropdownskills" class="w-full">
+                <option *ngFor="let option of data" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem" value="{{option.id}}" (click)="select($event)">{{option.name}}</option>
+            </select>
+        </div>
+    </div>
+</div>
+  

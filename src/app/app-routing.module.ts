@@ -7,6 +7,7 @@ import { HomeComponent as DashHomeComponent} from './dashboard/pages/home/home.c
 import { LayoutComponent } from './dashboard/pages/layout/layout.component';
 import { AuthGuard } from './guards/authguard.guard';
 import { ProyectosComponent as DashProyectosComponent } from './dashboard/pages/proyectos/proyectos.component';
+import { ProjectFormPageComponent as DashProyectoFormPageComponent } from './dashboard/pages/project-form-page/project-form-page.component'
 import { HabilidadesComponent as  DashHabilidadesComponent } from './dashboard/pages/habilidades/habilidades.component';
 import { SkillFormPageComponent as  DashSkillFormPageComponent } from './dashboard/pages/skill-form-page/skill-form-page.component';
 import { SobremiComponent as DashSobremi } from './dashboard/pages/sobremi/sobremi.component';
@@ -22,8 +23,11 @@ const routes: Routes = [
     { path: "home", component: DashHomeComponent },
     { path: "sobremi", component: DashSobremi },
     { path: "proyectos", component: DashProyectosComponent },
+    { path: "crearproject", component: DashProyectoFormPageComponent },
+    { path: "editproject/:id", component: DashProyectoFormPageComponent },
     { path: "habilidades", component: DashHabilidadesComponent },
     { path: "crearhabilidad", component: DashSkillFormPageComponent },
+    { path: "edithabilidad/:id", component: DashSkillFormPageComponent },
   ]},
 ];
 

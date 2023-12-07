@@ -22,6 +22,14 @@ export class SobremiService {
     );
   }
 
+  front():Observable<ISobremi>{
+    let header: HttpHeaders = this.headers.getheaderLogin();
+    return this.http.get<ISobremi>(
+      `${api}/Front/Getsobremi`,
+      { headers: header }
+    )
+  }
+
   set(sobremi:ISobremi):Observable<ISobremi>{
     let header: HttpHeaders = this.headers.getheader();
     return this.http.post<ISobremi>(

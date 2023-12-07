@@ -1,7 +1,6 @@
 F:\Projects\Portfolio\Api\DTO\bin\Debug\net7.0\DTO.deps.json
 F:\Projects\Portfolio\Api\DTO\bin\Debug\net7.0\DTO.dll
 F:\Projects\Portfolio\Api\DTO\bin\Debug\net7.0\DTO.pdb
-F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
 F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
 F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
 F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
@@ -10,3 +9,4 @@ F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\DTO.dll
 F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\refint\DTO.dll
 F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\DTO.pdb
 F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\ref\DTO.dll
+F:\Projects\Portfolio\Api\DTO\obj\Debug\net7.0\DTO.sourcelink.json

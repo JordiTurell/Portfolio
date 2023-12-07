@@ -19,3 +19,4 @@ F:\Projects\Portfolio\Api\Services\bin\Debug\net7.0\DTO.dll
 F:\Projects\Portfolio\Api\Services\bin\Debug\net7.0\Entities.dll
 F:\Projects\Portfolio\Api\Services\bin\Debug\net7.0\DTO.pdb
 F:\Projects\Portfolio\Api\Services\bin\Debug\net7.0\Entities.pdb
+F:\Projects\Portfolio\Api\Services\obj\Debug\net7.0\Services.sourcelink.json

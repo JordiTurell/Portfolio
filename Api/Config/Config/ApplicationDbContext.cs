@@ -21,5 +21,8 @@ namespace Config.Config
 
     public DbSet<Sobremi> Sobremi { get; set; }
     public DbSet<Skills> Skills { get; set; }
+    public DbSet<Proyecto> Proyecto { get; set; }
+    public DbSet<ProyectosImagenes> ProyectosImagenes { get; set; }
+    public DbSet<ProyectoSkills> ProyectoSkills { get; set; }
   }  
 }

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navigation',
@@ -10,6 +10,15 @@ export class NavigationComponent implements AfterViewInit {
 
   istoggle: boolean = false
   
+  isNavbarOpaque = true;
+  
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    console.log(scrollPosition)
+    this.isNavbarOpaque = scrollPosition > 100
+  }
+
   ngAfterViewInit(): void {
     let navicon = document.querySelector('.nav-icon') as HTMLImageElement
     navicon.classList.add('nav-icon-animated')

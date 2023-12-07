@@ -13,20 +13,30 @@ import { Router } from '@angular/router';
 })
 export class HabilidadesComponent implements OnInit{
   
-  request:Requestlist = {
-    items: 10,
-    pages: 0
-  }
+  skills?:Skills[]
+  showlist:boolean = false
+
   constructor(private router:Router, private skillsService:SkillsService, private titleservice:TitleService){
     
   }
 
   ngOnInit(): void {
     this.titleservice.setMyVariable('Habilidades')
-    this.skillsService.getlist(this.request).subscribe((response) => {
-      console.log(response)
-      //this.skills = response
+    this.skillsService.getlist().subscribe({
+      next: (response) =>{
+          this.skills = response
+      },
+      error: (e)=>{
+        console.error(e)
+      },
+      complete:(() =>{
+        this.showlist = true
+      })
     })
+  }
+
+  edit(id:string){
+    this.router.navigate(['/dashboard/edithabilidad', id])
   }
 
   FormSkill(){

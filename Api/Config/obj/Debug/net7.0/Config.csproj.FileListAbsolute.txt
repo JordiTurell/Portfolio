@@ -15,3 +15,4 @@ F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\ref\Config.dll
 F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Entities.dll
 F:\Projects\Portfolio\Api\Config\bin\Debug\net7.0\Entities.pdb
 F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.csproj.CopyComplete
+F:\Projects\Portfolio\Api\Config\obj\Debug\net7.0\Config.sourcelink.json

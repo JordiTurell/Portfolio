@@ -1,0 +1,11 @@
+<section class="container mt-20 w-1/2 mb-20">
+  <h1 class="font-sans font-bold text-2xl text-white mb-4">Proyectos</h1>
+
+  <div class="container grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 mb-20" id="proyectos">
+    <div *ngFor="let group of chunkedImages" class="grid gap-4">
+      <div *ngFor="let image of group">
+        <img class="h-auto max-w-full rounded-lg" [src]="image" alt="">
+      </div>
+    </div>
+  </div>
+</section>  

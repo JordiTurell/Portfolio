@@ -86,6 +86,61 @@ namespace Config.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("Entities.Proyecto", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("description")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("gohst")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("title")
+                        .HasColumnType("text");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Proyecto");
+                });
+
+            modelBuilder.Entity("Entities.ProyectoSkills", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("idproyecto")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("idskill")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("id");
+
+                    b.ToTable("ProyectoSkills");
+                });
+
+            modelBuilder.Entity("Entities.ProyectosImagenes", b =>
+                {
+                    b.Property<Guid>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("idproyecto")
+                        .HasColumnType("uuid");
+
+                    b.Property<byte[]>("imagen")
+                        .IsRequired()
+                        .HasColumnType("bytea");
+
+                    b.HasKey("id");
+
+                    b.ToTable("ProyectosImagenes");
+                });
+
             modelBuilder.Entity("Entities.Skills", b =>
                 {
                     b.Property<Guid>("Id")
@@ -93,15 +148,16 @@ namespace Config.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<byte[]>("Logo")
-                        .IsRequired()
                         .HasColumnType("bytea");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Percent")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("ghost")
+                        .HasColumnType("boolean");
 
                     b.HasKey("Id");
 

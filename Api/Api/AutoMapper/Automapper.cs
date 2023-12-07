@@ -14,6 +14,8 @@ namespace Api.AutoMapper
 
       CreateMap<SkillsDto, SkillsVM>().ReverseMap();
       CreateMap<Skills, SkillsDto>().ReverseMap();
+      CreateMap<ProyectoDTO, ProyectosVM>().ReverseMap();
+      CreateMap<Proyecto, ProyectoDTO>().ReverseMap();
     }
   }
 }

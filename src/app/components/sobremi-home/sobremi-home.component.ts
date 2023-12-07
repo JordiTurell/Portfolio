@@ -15,7 +15,7 @@ export class SobremiHomeComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.sobremiservice.get().subscribe({
+    this.sobremiservice.front().subscribe({
       next: (v) => {
         this.sobremi = v
       },

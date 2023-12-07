@@ -1,5 +1,5 @@
 <!-- app.component.html -->
-<nav class="bg-gray-800 fixed">
+<nav class="bg-gray-800 fixed" [ngClass]="{'bg-black': isNavbarOpaque, 'bg-gray-800': !isNavbarOpaque, 'transition-all duration-300 ease-in-out': true}">
     <div class="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 right-0 flex items-center sm:hidden" (click)="toggleMenu()">
@@ -35,9 +35,9 @@
             <div class="flex space-x-4 justify-center">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="home#inicio" class="nav-link nav-item active navlinkanimated text-sm font-medium" aria-current="page">Inicio</a>
-              <a href="#sobremi" class="nav-link nav-item navlinkanimated text-sm font-medium">Sopbre mí</a>
-              <a href="#habilidades" class="nav-link nav-item navlinkanimated text-sm font-medium">Habilidades</a>
-              <a href="#proyectos" class="nav-link nav-item navlinkanimated text-sm font-medium">Proyectos</a>
+              <a href="home#sobremi" class="nav-link nav-item navlinkanimated text-sm font-medium">Sopbre mí</a>
+              <a href="home#habilidades" class="nav-link nav-item navlinkanimated text-sm font-medium">Habilidades</a>
+              <a href="home#proyectos" class="nav-link nav-item navlinkanimated text-sm font-medium">Proyectos</a>
               <a href="home#contacto" class="nav-link nav-item navlinkanimated text-sm font-medium">Contacto</a>
             </div>
           </div>
@@ -49,60 +49,11 @@
     <div class="sm:hidden" id="mobile-menu" [class.hidden]="!istoggle">
       <div class="space-y-1 px-2 pb-3 pt-2" id="menu">
         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-        <a routerLink="#inicio" class="block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Inicio</a>
-        <a routerLink="#sobremi" class="block rounded-md px-3 py-2 text-base font-medium">Sobre mí</a>
-        <a routerLink="#habilidades" class="block rounded-md px-3 py-2 text-base font-medium">Habilidades</a>
-        <a routerLink="#proyectos" class="block rounded-md px-3 py-2 text-base font-medium">Proyectos</a>
-        <a routerLink="#contacto" class="block rounded-md px-3 py-2 text-base font-medium">Contacto</a>
+        <a routerLink="home#inicio" class="block rounded-md px-3 py-2 text-base text-white font-medium" aria-current="page">Inicio</a>
+        <a routerLink="home#sobremi" class="block rounded-md px-3 py-2 text-base text-white font-medium">Sobre mí</a>
+        <a routerLink="home#habilidades" class="block rounded-md px-3 py-2 text-base text-white font-medium">Habilidades</a>
+        <a routerLink="home#proyectos" class="block rounded-md px-3 py-2 text-base text-white font-medium">Proyectos</a>
+        <a routerLink="home#contacto" class="block rounded-md px-3 py-2 text-base text-white font-medium">Contacto</a>
       </div>
     </div>
   </nav>
-  
-
-
-
-
-<!-- Barra de Navegación -->
-<!-- <nav class="navbar navbar-expand-md navbar-fixed-top">
-    <div class="d-flex justify-content-center">
-        
-        <a class="navbar-brand d-flex justify-content-start" [routerLink]="['/home']">
-            <img src="/assets/argproglogo.png" class="nav-icon" />
-        </a>
-        
-        <button class="hamburger-icon" (click)="toggleMenu()">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-
-
-        <ul class="navbar-nav mx-auto d-flex" id="menu">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">
-                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Inicio</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#sobremi">
-                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Acerca</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Habilidades</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Proyectos</span>
-                </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                <span class="text-nobreak mt-2 mt-lg-auto ms-2 mx-lg-auto mb-1 mb-lg-0">Contacto</span>
-            </a>
-          </li>
-        </ul>
-    </div>
-  </nav> -->

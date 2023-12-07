@@ -1,5 +1,8 @@
-<section id="experiencia">
-    <div class="container">
-        
+<section class="container mt-20 w-1/2 mb-20" *ngIf="skills" id="habilidades">
+    <h1 class="font-sans font-bold text-2xl text-white mb-4">Habilidades</h1>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div *ngFor="let item of skills" class="bg-slate-200 border-collapse flex items-center justify-center w-full p-2 rounded-lg shadow-inner shadow-yellow-500 hover:animate-bounce">
+            <img class="h-20 max-w-full rounded-lg" src="{{item.logo}}" alt="">
+        </div>
     </div>
 </section>

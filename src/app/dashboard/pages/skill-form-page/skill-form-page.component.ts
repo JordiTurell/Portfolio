@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-skill-form-page',
@@ -7,9 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./skill-form-page.component.scss']
 })
 export class SkillFormPageComponent {
-
-  constructor(private router:Router){
-
+  id?:string 
+  constructor(private router:Router, private route: ActivatedRoute){
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      this.id = id
+    });
   }
 
   goBack(){

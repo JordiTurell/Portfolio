@@ -1,6 +1,7 @@
 export interface Skills {
-    Id : string
-    Name : string
-    Percent : number
-    Logo : string
+    id : string
+    name : string
+    percent : number
+    logo : string
+    ghost:boolean
 }

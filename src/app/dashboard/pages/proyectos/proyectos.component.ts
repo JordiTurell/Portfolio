@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TitleService } from '../../service/title-service/title-service.service';
+import { Router } from '@angular/router';
+import { Proyecto } from '../../model/proyecto/proyecto';
 
 @Component({
   selector: 'app-proyectos',
@@ -8,12 +10,16 @@ import { TitleService } from '../../service/title-service/title-service.service'
 })
 export class ProyectosComponent implements OnInit{
 
-  constructor(private titleservice:TitleService){
+  projects?:Proyecto[]
 
-  }
+  constructor(private titleservice:TitleService, private router:Router){
 
+  } 
   ngOnInit(): void {
     this.titleservice.setMyVariable('Proyectos')
   }
 
+  FormProject(){
+    this.router.navigate(['/dashboard/crearproject'])
+  }
 }

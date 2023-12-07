@@ -1,0 +1,1 @@
+2023-12-07 10:23:21.765 +01:00 [ERR] An error occurred using the connection to database 'Portfolio' on server ''.

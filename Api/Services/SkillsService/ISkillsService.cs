@@ -10,7 +10,10 @@ namespace Services.SkillsService
   public interface ISkillsService
   {
     SkillsDto GetSkill(Guid Id);
-    Task<SkillsDto> SetSkills(SkillsDto dto);
+    Task<SkillsDto> SetImage(SkillsDto dto);
     IQueryable<SkillsDto> DataTable();
+    SkillsDto GhostSkill();
+    Task SetSkills(SkillsDto dto);
+    byte[] GetImage(Guid id);
   }
 }

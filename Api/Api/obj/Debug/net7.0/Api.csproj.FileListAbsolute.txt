@@ -122,3 +122,5 @@ F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\DTO.dll
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Entities.dll
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\DTO.pdb
 F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\Entities.pdb
+F:\Projects\Portfolio\Api\Api\bin\Debug\net7.0\uploads\json.json
+F:\Projects\Portfolio\Api\Api\obj\Debug\net7.0\Api.sourcelink.json

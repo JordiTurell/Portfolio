@@ -9,7 +9,6 @@ using ViewModel;
 namespace Api.Controllers
 {
   [ApiController]
-  [Route("/[controller]")]
   [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
   public class SkillsController: ControllerBase
   {
@@ -41,13 +40,49 @@ namespace Api.Controllers
       return Ok(vm);
     }
 
+    [HttpGet]
+    [Route("/[controller]/GhostSkill")]
+    public IActionResult GhostSkill()
+    {
+      SkillsDto dto = _skillsService.GhostSkill();
+      SkillsVM vm = _mapper.Map<SkillsVM>(dto);
+
+      return Ok(vm);
+    }
+
     [HttpPost]
     [Route("/[controller]/SetSkills")]
-    public async Task<IActionResult> SetSkills(SkillsVM vm)
+    public async Task<IActionResult> SetSkills([FromBody] SkillsVM vm)
     {
       SkillsDto dto = _mapper.Map<SkillsDto>(vm);
       await _skillsService.SetSkills(dto);
       return Ok(vm);
+    }
+
+    [HttpPost]
+    [Route("/[controller]/UploadFile/{id}")]
+    public async Task<IActionResult> UploadFile([FromForm] IFormFile file, Guid id)
+    {
+      if (file == null || file.Length == 0)
+      {
+        return BadRequest("File is null or empty");
+      }
+
+      var filePath = Path.Combine("uploads", file.FileName);
+
+      using (var stream = new FileStream(filePath, FileMode.Create))
+      {
+        await file.CopyToAsync(stream);
+      }
+
+      byte[] f = System.IO.File.ReadAllBytes(filePath);
+      SkillsDto dto = _skillsService.GetSkill(id);
+      dto.imagen = f;
+      await _skillsService.SetImage(dto);
+
+      System.IO.File.Delete(filePath);
+
+      return Ok("File uploaded successfully");
     }
   }
 }

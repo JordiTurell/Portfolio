@@ -43,9 +43,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
-
-
+import { ProyectosHomeComponent } from './components/proyectos-home/proyectos-home.component';
+import { FormProjectComponent } from './dashboard/forms/form-project/form-project.component';
+import { ProjectFormPageComponent } from './dashboard/pages/project-form-page/project-form-page.component';
+import { SelectMultipleComponent } from './dashboard/general-component/select-multiple/select-multiple.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     DashSobremiComponent,
     SobremiHomeComponent,
     SkillFormPageComponent,
-    FormSkillComponent
+    FormSkillComponent,
+    ProyectosHomeComponent,
+    FormProjectComponent,
+    ProjectFormPageComponent,
+    SelectMultipleComponent
   ],
   imports: [
     BrowserModule,

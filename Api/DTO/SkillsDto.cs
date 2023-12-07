@@ -9,9 +9,11 @@ namespace DTO
 {
   public class SkillsDto
   {
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-    public int Percent { get; set; }
-    public string Logo { get; set; }
+    public Guid id { get; set; }
+    public string name { get; set; }
+    public int percent { get; set; }
+    public string logo { get; set; }
+    public byte[] imagen { get; set; }
+    public bool ghost { get; set; }
   }
 }
