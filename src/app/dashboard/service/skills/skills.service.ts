@@ -18,7 +18,7 @@ export class SkillsService {
   getlist():Observable<Skills[]>{
     let header: HttpHeaders = this.headers.getheader();
     return this.http.get<Skills[]>(
-      `${api}/Skills/DataTable`,
+      `${api}/skills/listado`,
       { headers: header }
     )
   }
@@ -26,7 +26,7 @@ export class SkillsService {
   getlistfront():Observable<Skills[]>{
     let header: HttpHeaders = this.headers.getheaderLogin();
     return this.http.get<Skills[]>(
-      `${api}/Front/Skills`,
+      `${api}/skills`,
       { headers: header }
     )
   }
@@ -35,7 +35,7 @@ export class SkillsService {
     skills.ghost = false
     let header: HttpHeaders = this.headers.getheader();
     return this.http.post<Skills>(
-      `${api}/Skills/SetSkills`,
+      `${api}/skills/create`,
       skills,
       { headers: header }
     )
@@ -44,7 +44,7 @@ export class SkillsService {
   ficha():Observable<Skills>{
     let header: HttpHeaders = this.headers.getheader();
     return this.http.get<Skills>(
-      `${api}/Skills/GhostSkill`,
+      `${api}/skills/ghost`,
       { headers: header }
     )
   }
@@ -52,7 +52,7 @@ export class SkillsService {
   editficha(id:string):Observable<Skills>{
     let header: HttpHeaders = this.headers.getheader();
     return this.http.get<Skills>(
-      `${api}/Skills/GetSkill/${id}`,
+      `${api}/skills/get/${id}`,
       { headers: header }
     )
   }
@@ -63,7 +63,7 @@ export class SkillsService {
     formData.append('file', file);
 
     return this.http.post<any>(
-      `${api}/Skills/UploadFile/${id}`,
+      `${api}/skills/updatefile/${id}`,
        formData,
        { headers: header }
       )

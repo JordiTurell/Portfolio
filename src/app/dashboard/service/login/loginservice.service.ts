@@ -17,7 +17,7 @@ export class LoginService {
   authenticate(loginvm: ILogin): Observable<IToken> {
     let header: HttpHeaders = this.headers.getheaderLogin();
     return this.http.post<IToken>(
-      `${api}/Acceso/Login`,
+      `${api}/login`,
       loginvm,
       { headers: header }
     );

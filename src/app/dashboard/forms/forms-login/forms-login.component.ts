@@ -36,7 +36,13 @@ export class FormsLoginComponent {
       this.isLoading = true;
       this.loginservice.authenticate(this.loginform.value).subscribe({
         next: (response) =>{
-          this.authservice.setToken(response.token)
+          if(response.status){
+            this.authservice.setToken(response.token)
+          }else{
+            this.errordialogservice.openErrorDialog('Acceso incorrecto')
+            this.isLoading = false
+            this.saveButton.reset()
+          }
         },
         error: (e)=>{
           this.errordialogservice.openErrorDialog('Acceso incorrecto')

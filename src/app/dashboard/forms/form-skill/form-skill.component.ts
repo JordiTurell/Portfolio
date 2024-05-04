@@ -22,8 +22,8 @@ export class FormSkillComponent implements OnInit{
 
   constructor(private router:Router, private fb: FormBuilder, public errordialogservice: ErrorDialogService, private skillservice:SkillsService){
     this.skillform = this.fb.group({
-      name: ['', Validators.required],
-      percent: ['', Validators.required],
+      nombre: ['', Validators.required],
+      porcentage: ['', Validators.required],
       logo: [''],
       id: ['']
     })

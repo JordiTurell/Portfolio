@@ -18,7 +18,7 @@ export class FormsSobremiComponent implements AfterViewInit {
   constructor(private fb: FormBuilder, public errordialogservice: ErrorDialogService, private sobremiservice:SobremiService){
     this.sobremiform = this.fb.group({
       title: ['', Validators.required],
-      description: ['', Validators.required],
+      descripcion: ['', Validators.required],
       id: ['', Validators.required]
     })
   }
@@ -26,7 +26,9 @@ export class FormsSobremiComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.sobremiservice.get().subscribe({
       next: (v) => {
-        this.sobremiform.patchValue(v)
+        if(v != null){
+          this.sobremiform.patchValue(v)
+        }
       },
       error: (e) => console.error(e),
       complete: () => {
