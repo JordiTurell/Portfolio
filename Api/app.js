@@ -4,7 +4,8 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer')
 
 const sequelize = require('./sequelize');
-const servicios = require('./servicios/servicios')
+const servicios = require('./servicios/servicios');
+const { join } = require('path');
 
 const app = express();
 const port = 3000;
@@ -32,20 +33,13 @@ function verificarToken(req, res, next) {
   });
 }
 
-
-// Configura Multer para almacenar las imágenes en el directorio 'uploads'
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, '../src/assets/'); // Define el directorio de almacenamiento
-  },
-  filename: function (req, file, cb) {
-    // Genera un nombre de archivo único basado en la fecha actual
-    cb(null, Date.now() + '-' + file.originalname);
+// Configura el middleware Multer con las opciones de almacenamiento
+const multerUpload = multer({ 
+  dest: join(__dirname, '../src/assets/'),
+  limits: {
+    fieldSize: 10000000
   }
 });
-
-// Configura el middleware Multer con las opciones de almacenamiento
-const upload = multer({ storage: storage });
 
 
 //Login
@@ -81,15 +75,17 @@ app.get('/skills/get/:id', verificarToken, async (req, res) => {
   const { id } = req.params
   return res.json(await servicios.SkillsServicio.get(id))
 });
-app.post('/skills/updatefile/:id', verificarToken,  upload.single('file'), async (req, res) => {
+app.post('/skills/updatefile/:id', multerUpload.single('file'), async (req, res) => {
   const { id } = req.params
-  console.log(req)
-  if (!req.file) {
-    return res.status(400).json({ mensaje: 'No se ha proporcionado ninguna imagen' });
-  }
-  const rutaImagen = req.file.path;
-  console.log(rutaImagen)
-  return res.json(await servicios.SkillsServicio.updatefile(req, id))
+  console.log(id)
+  res.sendStatus(200)
+  // console.log(req)
+  // if (!req.file) {
+  //   return res.status(400).json({ mensaje: 'No se ha proporcionado ninguna imagen' });
+  // }
+  // const rutaImagen = req.file.path;
+  // console.log(rutaImagen)
+  // return res.json(await servicios.SkillsServicio.updatefile(req, id))
 });
 
 

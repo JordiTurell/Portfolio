@@ -93,8 +93,14 @@ export class FormSkillComponent implements OnInit{
         this.preview = e.target.result;
       };
       reader.readAsDataURL(this.currentFile);
-      this.skillservice.uploadlogo(this.currentFile, this.skillform.value.id).subscribe(response => {
-        
+      this.skillservice.uploadlogo(this.currentFile, this.skillform.value.id).subscribe({
+        next:(v) => {
+
+        },
+        error:(v) => {
+          console.log(v)
+        },
+        complete: () => {}
       });
     }
   }

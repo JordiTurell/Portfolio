@@ -31,6 +31,7 @@ import { ModalloginComponent } from './dashboard/modals/modallogin/modallogin.co
 import { FormsLoginComponent } from './dashboard/forms/forms-login/forms-login.component';
 import { SkillFormPageComponent } from './dashboard/pages/skill-form-page/skill-form-page.component';
 import { FormSkillComponent } from './dashboard/forms/form-skill/form-skill.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 //#endregion dashboard
 
 
@@ -91,7 +92,8 @@ import { SelectMultipleComponent } from './dashboard/general-component/select-mu
     MatTableModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

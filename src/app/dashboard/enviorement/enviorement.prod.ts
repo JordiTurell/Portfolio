@@ -1,5 +1,5 @@
 export const environment = {
     token: "token",
-    api: "http://192.168.1.101/api:4439",
+    api: "https://api-jorditurell.duckdns.org",
     version:"v1"
 }

@@ -33,7 +33,7 @@ export class HeadersService {
     }
     this.headers = new HttpHeaders({
       'Content-Type': 'multipart/form-data',
-      'Authorization': `Bearer ${this.token}`
+      //'Authorization': `Bearer ${this.token}`
     });
 
     return this.headers

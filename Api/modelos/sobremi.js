@@ -4,7 +4,7 @@ const sequelize = require('../sequelize');
 // Define el modelo para tu tabla en la base de datos
 const Sobremi = sequelize.define('Sobremi', {
     id: {
-        type: DataTypes.UUID,
+        type: DataTypes.UUIDV4,
         defaultValue: DataTypes.UUIDV4, // Genera automáticamente un UUID al crear un registro
         primaryKey: true
     },
@@ -13,7 +13,7 @@ const Sobremi = sequelize.define('Sobremi', {
         allowNull: false
     },
     descripcion: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false
     },
 });

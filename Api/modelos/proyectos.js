@@ -4,7 +4,7 @@ const sequelize = require('../sequelize');
 // Define el modelo para tu tabla en la base de datos
 const Proyectos = sequelize.define('Proyectos', {
     id: {
-        type: DataTypes.UUID,
+        type: DataTypes.UUIDV4,
         defaultValue: DataTypes.UUIDV4, // Genera automáticamente un UUID al crear un registro
         primaryKey: true
     },
